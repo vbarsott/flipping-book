@@ -2,7 +2,7 @@
 
 ## Link to the project
 
-https://vbarsott.github.io/flipping-book/
+https://flippingbook.vanessabarsotti.com/
 
 ## Description
 
