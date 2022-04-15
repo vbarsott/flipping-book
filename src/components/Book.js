@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import BookPages from './BookPages';
+import PaperSheets from './PaperSheets';
 import NextPageBtn from './NextPageBtn';
 import PrevPageBtn from './PrevPageBtn';
 
 const Book = () => {
-  const [bookPages, setBookPages] = useState([
+  const [paperSheets, setPaperSheets] = useState([
     {
       id: '1',
       flipped: false,
-      zIndex: 4,
+      zIndex: 3,
       frontPageContent: {
         title: 'Flipping Book',
         text: 'Front Cover',
@@ -23,7 +23,7 @@ const Book = () => {
     {
       id: '2',
       flipped: false,
-      zIndex: 3,
+      zIndex: 2,
       frontPageContent: {
         title: 'Page 2',
         text: 'Content here',
@@ -70,22 +70,22 @@ const Book = () => {
         closeBook(true);
       }
 
-      if (currentLocation === bookPages.length) {
+      if (currentLocation === paperSheets.length) {
         openBook();
       }
 
-      const previousBookPage = bookPages[currentLocation - 1];
+      const previousBookPage = paperSheets[currentLocation - 1];
 
-      setBookPages(
-        bookPages.map((bookPage, index) => {
+      setPaperSheets(
+        paperSheets.map((paperSheet, index) => {
           return {
-            ...bookPage,
+            ...paperSheet,
             flipped:
-              bookPage.id === previousBookPage.id ? false : bookPage.flipped,
+            paperSheet.id === previousBookPage.id ? false : paperSheet.flipped,
             zIndex:
-              bookPage.id === previousBookPage.id
-                ? bookPages.length - index
-                : bookPage.zIndex,
+            paperSheet.id === previousBookPage.id
+                ? paperSheets.length - index
+                : paperSheet.zIndex,
           };
         })
       );
@@ -95,25 +95,25 @@ const Book = () => {
   };
 
   const goToNextPage = () => {
-    if (currentLocation < bookPages.length) {
+    if (currentLocation < paperSheets.length) {
       if (currentLocation === 0) {
         openBook();
       }
 
-      if (currentLocation === bookPages.length - 1) {
+      if (currentLocation === paperSheets.length - 1) {
         closeBook(false);
       }
 
-      const currentBookPage = bookPages[currentLocation];
+      const currentBookPage = paperSheets[currentLocation];
 
-      setBookPages(
-        bookPages.map((bookPage, index) => {
+      setPaperSheets(
+        paperSheets.map((paperSheet, index) => {
           return {
-            ...bookPage,
+            ...paperSheet,
             flipped:
-              bookPage.id === currentBookPage.id ? true : bookPage.flipped,
+            paperSheet.id === currentBookPage.id ? true : paperSheet.flipped,
             zIndex:
-              bookPage.id === currentBookPage.id ? index : bookPage.zIndex,
+            paperSheet.id === currentBookPage.id ? index : paperSheet.zIndex,
           };
         })
       );
@@ -133,13 +133,13 @@ const Book = () => {
       <PrevPageBtn goToPrevPage={goToPrevPage} isClosed={isClosed} />
 
       <div className='book' style={bookStyle}>
-        {bookPages.map((bookPage) => (
-          <BookPages
-            key={bookPage.id}
-            flipped={bookPage.flipped}
-            zIndex={bookPage.zIndex}
-            frontPageContent={bookPage.frontPageContent}
-            backPageContent={bookPage.backPageContent}
+        {paperSheets.map((paperSheet) => (
+          <PaperSheets
+            key={paperSheet.id}
+            flipped={paperSheet.flipped}
+            zIndex={paperSheet.zIndex}
+            frontPageContent={paperSheet.frontPageContent}
+            backPageContent={paperSheet.backPageContent}
           />
         ))}
       </div>

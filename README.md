@@ -8,18 +8,27 @@ https://flippingbook.vanessabarsotti.com/
 
 This is an example of a css animation for a flipping book using react and scss.
 
-## Quick start
+## If cloning the project:
+
+- git clone https://github.com/vbarsott/flipping-book.git
+- npm install
+- npm run dev
+
+## If creating from scratch:
 
 - Run: `npx create-react-app flippingbook`
 - Clean up extra files
 - Include information on .gitignore (ex: exclude docs folder)
 - Start: `npm start`
+- Code: start coding
 
 ## Install modules:
 
+### Router
+
 - Router: `npm i react-router-dom`
 
-## Styling:
+### Styling
 
 - Sass: `npm i sass --save-dev`
 - Import inside App.js: `import './styles/css/styles.css';`
@@ -34,7 +43,7 @@ This is an example of a css animation for a flipping book using react and scss.
 - React Bootstrap: `npm i react-bootstrap`
 - React icons: `npm i react-icons`
 
-## Setup to run all together:
+### Setup to run all together (npm start and npm run sass)
 
 - Install: `npm i concurrently --save-dev`
 - Include script on package.json (DON'T DELETE WHAT WAS INSTALLED BEFORE):

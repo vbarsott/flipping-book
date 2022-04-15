@@ -1,14 +1,14 @@
 import React from 'react';
 import PageContent from './PageContent';
 
-const BookPages = ({ flipped, zIndex, frontPageContent, backPageContent }) => {
-  const bookPageZIndex = { zIndex: zIndex };
+const PaperSheets = ({ flipped, zIndex, frontPageContent, backPageContent }) => {
+  const paperSheetZIndex = { zIndex: zIndex };
 
   return (
     <>
       <div
-        className={`bookPages ${flipped ? 'flipped' : ''}`}
-        style={bookPageZIndex}>
+        className={`paperSheets ${flipped ? 'flipped' : ''}`}
+        style={paperSheetZIndex}>
         <div className='front'>
           <PageContent
             title={frontPageContent.title}
@@ -29,4 +29,4 @@ const BookPages = ({ flipped, zIndex, frontPageContent, backPageContent }) => {
   );
 };
 
-export default BookPages;
+export default PaperSheets;
