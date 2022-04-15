@@ -1,0 +1,89 @@
+// =============================================
+// Custom breakpoints and grid:
+// =============================================
+
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 420px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$container-max-widths: (
+  xs: 450px,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+@mixin xxs {
+  @media (min-width: map-get($grid-breakpoints, 'xxs')) {
+    @content;
+  }
+}
+@mixin xs {
+  @media (min-width: map-get($grid-breakpoints, 'xs')) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (min-width: map-get($grid-breakpoints, 'sm')) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: map-get($grid-breakpoints, 'md')) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: map-get($grid-breakpoints, 'lg')) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: map-get($grid-breakpoints, 'xl')) {
+    @content;
+  }
+}
+@mixin xxl {
+  @media (min-width: map-get($grid-breakpoints, 'xxl')) {
+    @content;
+  }
+}
+@mixin breakpoint($bp: 0) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+.responsiveTest {
+  @include xxs {
+    color: aqua;
+  }
+  @include xs {
+    color: red;
+  }
+  @include sm {
+    color: blue;
+  }
+  @include md {
+    color: green;
+  }
+  @include lg {
+    color: purple;
+  }
+  @include xl {
+    color: orange;
+  }
+  @include xxl {
+    color: darkcyan;
+  }
+  @include breakpoint(1500px) {
+    color: pink;
+  }
+}

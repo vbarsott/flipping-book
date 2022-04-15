@@ -1,0 +1,65 @@
+// @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Acme&family=Akaya+Kanadaka&family=Aladin&family=Berkshire+Swash&family=Cabin+Sketch:wght@400;700&family=Chango&family=Chela+One&family=Chicle&family=Coiny&family=Dela+Gothic+One&family=Fredoka+One&family=Gluten:wght@300;700&family=Henny+Penny&family=Irish+Grover&family=Itim&family=Lilita+One&family=Merienda:wght@400;700&family=Mochiy+Pop+One&family=Modak&family=Patrick+Hand&family=Paytone+One&family=Poller+One&family=Potta+One&family=Rammetto+One&family=Rampart+One&family=Ranchers&family=Rancho&family=Righteous&family=Salsa&family=Shizuru&family=Slackey&family=Special+Elite&family=Spicy+Rice&display=swap');
+
+// $font-styled: 'ABeeZee', sans-serif;
+// $font-styled: 'Acme', sans-serif;
+// $font-styled: 'Akaya Kanadaka', cursive;*
+// $font-styled: 'Aladin', cursive;
+// $font-styled: 'Berkshire Swash', cursive;*
+// $font-styled: 'Cabin Sketch', cursive;*
+// $font-styled: 'Chango', cursive;*
+// $font-styled: 'Chela One', cursive;
+// $font-styled: 'Chicle', cursive;
+// $font-styled: 'Coiny', cursive;*
+// $font-styled: 'Dela Gothic One', cursive;
+// $font-styled: 'Fredoka One', cursive;*
+// $font-styled: 'Gluten', cursive;
+// $font-styled: 'Henny Penny', cursive;
+// $font-styled: 'Irish Grover', cursive;
+// $font-styled: 'Itim', cursive;
+// $font-styled: 'Lilita One', cursive;
+// $font-styled: 'Merienda', cursive;
+// $font-styled: 'Mochiy Pop One', sans-serif;
+// $font-styled: 'Modak', cursive;
+// $font-styled: 'Patrick Hand', cursive;
+// $font-styled: 'Paytone One', sans-serif;
+// $font-styled: 'Poller One', cursive;
+// $font-styled: 'Potta One', cursive;
+// $font-styled: 'Rammetto One', cursive;
+$font-styled: 'Rampart One', cursive;
+// $font-styled: 'Ranchers', cursive;*
+// $font-styled: 'Rancho', cursive;
+// $font-styled: 'Righteous', cursive;
+// $font-styled: 'Salsa', cursive;
+// $font-styled: 'Shizuru', cursive;
+// $font-styled: 'Slackey', cursive;
+// $font-styled: 'Special Elite', cursive;
+// $font-styled: 'Spicy Rice', cursive;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$font-default: 'Poppins', sans-serif;
+
+// Bootstrap font-sizes
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+// Replace Bootstrap base styles
+$font-family-base: 'Poppins', sans-serif;
+$link-decoration: none;
+
+// Enables bootstrap negative margins
+$enable-negative-margins: true;
+
+// Custom styles
+@import './custom-colors';
+@import './custom-breakpoints';
+@import './custom-utilities';
+@import './custom-styles';
+
+// Bootstrap styles
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
